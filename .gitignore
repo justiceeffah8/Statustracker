@@ -1,0 +1,14 @@
+node_modules/
+node_modules.pnpm-backup/
+.pnpm-store/
+pnpm-lock.yaml
+pnpm-workspace.yaml
+dist/
+.env
+.env.local
+.vercel/
+.firebase/
+tmp/
+syllabus/
+*.tsbuildinfo
+*.log

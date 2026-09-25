@@ -1,0 +1,20 @@
+runConfig:
+  minInstances: 0
+
+scripts:
+  buildCommand: npm run build
+  runCommand: node server/production.mjs
+
+env:
+  - variable: OPENAI_API_KEY
+    secret: openaiApiKey
+    availability:
+      - RUNTIME
+  - variable: OPENAI_MODEL
+    value: gpt-5.4-mini
+    availability:
+      - RUNTIME
+  - variable: ALLOWED_ORIGINS
+    value: https://studentstatustracker.web.app,https://studentstatustracker.firebaseapp.com,https://statustracker-c1029--statustracker-c1029.us-east4.hosted.app
+    availability:
+      - RUNTIME

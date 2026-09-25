@@ -1,0 +1,54 @@
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "auth": {
+    "providers": {
+      "anonymous": true,
+      "emailPassword": true
+    }
+  },
+  "apphosting": {
+    "backendId": "statustracker-c1029",
+    "rootDir": "/",
+    "ignore": [
+      "node_modules",
+      "node_modules.pnpm-backup",
+      ".pnpm-store",
+      ".env",
+      ".env.local",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log",
+      "functions",
+      "tmp",
+      "syllabus"
+    ]
+  },
+  "hosting": {
+    "site": "studentstatustracker",
+    "public": "dist",
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
